@@ -1,0 +1,96 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 12px;
+  }
+  
+  .wd-tuit {
+    padding: 12px;
+    width: 1150px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .wd-border-class{
+    border: 2px solid lightgray;
+    border-radius: 18px;
+
+  }
+  .wd-tuit-content {
+    margin-left: 55px;
+    width:850px;
+  }
+
+  .wd-setting::before {
+    content: ". . .";
+    position: absolute;
+    top: 0;
+    right: 250px;
+    font-size: larger;
+    font-weight: bolder;
+    color: grey;
+  }
+  .wd-tab {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .wd-tuit-content h3{
+    font-weight: bold;
+    padding-left: 10px;
+  }
+  .wd-tuit-image {
+    width: 50px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+  }
+
+.wd-h3-span{
+    font-size: 18px;
+    font-weight: bolder;
+    color:#4d4a4a;
+    text-decoration: none;
+    padding-left: 10px;
+    display: inline-block;
+}
+.wd-tab-icon i {
+    margin-right: 5px;
+    background-color: white;
+    color: black;
+  }
+  .wd-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .wd-back-button {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .wd-menu-item {
+    margin-right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+.wd-tuit-content p{
+    font-size: larger;
+    font-weight: 900;
+}
+
+
+
+.wd-tab-icon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
