@@ -1,4 +1,4 @@
-import Labs from "./Lab";
+import Lab from "./Lab";
 import HelloWorld from "./Lab/Assignment3/hello-world";
 import Tuiter from "./tuiter";
 import {BrowserRouter} from "react-router-dom";
@@ -9,8 +9,8 @@ function App() {
     <BrowserRouter>
       <div className='container'>
         <Routes>
-            <Route path="/"         element={<Navigate to="/labs"/>}/>
-            <Route path="/Lab/*"   element={<Labs/>}/>
+            <Route path="/"         element={<Navigate to="/Lab"/>}/>
+            <Route path="/Lab/*"   element={<Lab/>}/>
             <Route path="/hello"    element={<HelloWorld/>}/>
             <Route path="/tuiter/*" element={<Tuiter/>}/>
         </Routes>
