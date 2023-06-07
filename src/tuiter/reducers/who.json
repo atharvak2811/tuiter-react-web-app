@@ -1,0 +1,15 @@
+[
+    {
+      "_id": 123,
+      "userName": "NASA",
+      "handle": "nasa",
+      "avatarIcon": "nasa.png"
+    },
+    {
+      "_id": 234,
+      "userName": "Apple",
+      "handle": "apple",
+      "avatarIcon": "apple.png"
+    }
+]
+   
