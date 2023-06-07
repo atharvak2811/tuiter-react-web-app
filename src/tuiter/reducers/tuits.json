@@ -11,7 +11,7 @@
         "retuits": 456,
         "likes": 111,
         "handle": "@spacex",
-        "tuit": "Tesla delivers 77,695 China-made EVs in May"
+        "tuit": "SpaceX has now launched more than 4,500 Starlink satellites, more than 4,100 of which are currently active."
     },
     { 
         "_id": 234, 
@@ -25,6 +25,6 @@
         "retuits": 123,
         "likes": 222,
         "handle": "@tesla",
-        "tuit": "CPCA is scheduled to release more detailed car sales figures for May later this month. "
+        "tuit": "Tesla Model 3 Cheaper Than Toyota Camry in California. "
     }
 ]
