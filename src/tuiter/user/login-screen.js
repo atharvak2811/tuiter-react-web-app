@@ -24,19 +24,17 @@ function LoginScreen() {
         <div>
             <h1>Login</h1>
             <div className={"mt-2"}>
-                <label>Username</label>
+                <label>Enter your username</label>
                 <input className={"form-control"} type={"text"} value={username}
                        onChange={(event) => setUsername(event.target.value)}/>
             </div>
             <div className={"mt-2"}>
-                <label>Password</label>
+                <label>Enter your password</label>
                 <input className={"form-control"} type={"password"} value={password}
                        onChange={(event) => setPassword(event.target.value)}/>
             </div>
             <div>
-                <a href={"/tuiter/register"}>Don't have an account?
-                    Click
-                    here to register!</a>
+                <a href={"/tuiter/register"}>Don't have an account? Click here to register!</a>
             </div>
             <div>
                 <button className={"btn btn-primary mt-2"} onClick={handleLogin}>Login</button>

@@ -15,13 +15,13 @@ function RegisterScreen() {
 
     const handleRegister = async () => {
         if (!firstName || !lastName || !username || !password || !handle || !image) {
-            alert("Please fill  all fields.");
+            alert("All fields are mandatory.");
             return;
         }
         try {
             await dispatch(registerThunk({firstName, lastName, username, password, handle, image}));
            
-            navigate("/tuiter/profile");
+            navigate("/tuiter/home");
         } catch (e) {
             alert(e);
         }
@@ -30,32 +30,27 @@ function RegisterScreen() {
         <div>
             <h1>Register</h1>
             <div className={"mt-2"}>
-                <label>First Name</label>
+                <label>Enter your first name</label>
                 <input className={"form-control"} type={"text"} value={firstName}
                        onChange={(event) => setFirstName(event.target.value)}/>
             </div>
             <div className={"mt-2"}>
-                <label>Last Name</label>
+                <label>Enter your last name</label>
                 <input className={"form-control"} type={"text"} value={lastName}
                        onChange={(event) => setLastName(event.target.value)}/>
             </div>
             <div className={"mt-2"}>
-                <label>Username</label>
+                <label>Enter your username</label>
                 <input className={"form-control"} type={"text"} value={username}
                        onChange={(event) => setUsername(event.target.value)}/>
             </div>
             <div className={"mt-2"}>
-                <label>Password</label>
+                <label>Enter your password</label>
                 <input className={"form-control"} type={"password"} value={password}
                        onChange={(event) => setPassword(event.target.value)}/>
             </div>
             <div className={"mt-2"}>
-                <label>Handle</label>
-                <input className={"form-control"} type={"text"} value={handle}
-                       onChange={(event) => setHandle(event.target.value)}/>
-            </div>
-            <div className={"mt-2"}>
-                <label>Image</label>
+                <label>Enter your profile image</label>
                 <input type="file" className="form-control" id="file-upload" accept="image/*"
                        onChange={(event) => {
                            const imageFiles = event.target.files;
