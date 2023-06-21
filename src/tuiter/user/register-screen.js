@@ -6,7 +6,6 @@ import {registerThunk} from "../services/auth-thunks";
 function RegisterScreen() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [handle, setHandle] = useState("");
     const [image, setImage] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -14,12 +13,12 @@ function RegisterScreen() {
     const dispatch = useDispatch();
 
     const handleRegister = async () => {
-        if (!firstName || !lastName || !username || !password || !handle || !image) {
+        if (!firstName || !lastName || !username || !password || !image) {
             alert("All fields are mandatory.");
             return;
         }
         try {
-            await dispatch(registerThunk({firstName, lastName, username, password, handle, image}));
+            await dispatch(registerThunk({firstName, lastName, username, password, image}));
            
             navigate("/tuiter/home");
         } catch (e) {

@@ -64,7 +64,26 @@ const tuitsSlice = createSlice({
    }
  },
 
- reducers: { }
+ reducers: {
+   toggleLike(state, action) {
+   const tuit = state.tuits.find(tuit => tuit._id === action.payload);
+   if (tuit) {
+     tuit.liked = !tuit.liked;
+     tuit.likes += tuit.liked ? 1 : -1;
+   }
+},
+createTuit(state, action) {
+   state.tuits.unshift({
+     ...action.payload,
+     ...templateTuit,
+     _id: (new Date()).getTime(),
+   })
+},
+deleteTuit(state, action) {
+   const index = state.tuits.findIndex(tuit => tuit._id === action.payload);
+   state.tuits.splice(index, 1);
+}   
+} 
 });
 
 export const { toggleLike, createTuit, deleteTuit } = tuitsSlice.actions;

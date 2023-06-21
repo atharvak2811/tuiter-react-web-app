@@ -11,13 +11,12 @@ export const loginThunk = createAsyncThunk(
 
 export const registerThunk = createAsyncThunk(
   "user/registerUser",
-  async ({ firstName, lastName, username, password, handle, image }) => {
+  async ({ firstName, lastName, username, password, image }) => {
       const userData = {
           firstName,
           lastName,
           username,
           password,
-          handle,
           image,
       };
       console.log(firstName);
@@ -30,11 +29,15 @@ export const profileThunk = createAsyncThunk(
     "auth/profile", async () => {
     return await authService.profile();
    });
-   export const logoutThunk = createAsyncThunk(
+
+
+export const logoutThunk = createAsyncThunk(
     "auth/logout", async () => {
     return await authService.logout();
    });
-   export const updateUserThunk = createAsyncThunk(
+
+
+export const updateUserThunk = createAsyncThunk(
     "user/updateUser", async (user) => {
       await authService.updateUser(user);
       return user;
